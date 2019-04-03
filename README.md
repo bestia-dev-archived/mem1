@@ -20,7 +20,7 @@ wasm-pack build --target no-modules
 
 ## Serve
 
-Run the html sever in mem1/ folder in a second terminal.
+Run the html server in mem1/ folder in a second terminal.
 So it can continuosly run while you incrementaly build your changes in the first terminal.
 
 ```
@@ -45,21 +45,19 @@ This is a programming example for Rust Webassembly Virtual Dom application.
 For the sake of simplicity, it is made as for single player mode. 
 
 # Programming references
-Everything is changing fast. This situation is on 2019-04-03.
+Everything is changing fast. This situation is on 2019-04-03.  
 https://doc.rust-lang.org/book/  
-https://github.com/fitzgen/dodrio
-https://github.com/brson/basic-http-server  
-https://rust-lang-nursery.github.io/rust-cookbook/  
-https://github.com/anderejd/wasm-bindgen-minimal-example
-https://www.w3schools.com/w3css/
+https://github.com/fitzgen/dodrio  
+https://github.com/brson/basic-http-server    
+https://rust-lang-nursery.github.io/rust-cookbook/    
+https://github.com/anderejd/wasm-bindgen-minimal-example  
+https://www.w3schools.com/w3css/  
 
-Clarified the "rand" problem and solution for wasm-bindgen:
+Clarified the "rand" problem and solution for wasm-bindgen:  
 https://medium.com/@rossharrison/generating-sudoku-boards-pt-3-rust-for-webassembly-85bd7294c34a  
 In this book I didn't find a clear explanation for rand and wasm:  
-https://rust-random.github.io/book/ 
+https://rust-random.github.io/book/  
 
-Images included free cartoon characters:
+Images included free cartoon characters:  
 https://vectorcharacters.net/alphabet-vectors/alphabet-cartoon-characters  
-
-
 
