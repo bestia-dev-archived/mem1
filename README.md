@@ -2,8 +2,8 @@
 
 Learning to use Dodrio virtual DOM on a simple memory game for kids.  
 The images are funny cartoon characters from the alphabet.  
-The cards grid is only 4x4.
-You can play it here:
+The cards grid is only 4x4.  
+You can play it here:  
 [https://lucianobestia.github.io/mem1_website/index.html](https://lucianobestia.github.io/mem1_website/index.html)
  
 
