@@ -248,10 +248,10 @@ If the cards do not match, the next player will start his turn with a click to t
 If the cards match, they are left face up and the player receives a point and continues with the next turn. No additional third click needed in that case. {}", "").into_bump_str(),
                     )])
                     .finish(),
-                h6(bump)
+                h7(bump)
                     .attr("style","text-align:center;")
                     .children([text(
-                        bumpalo::format!(in bump, "Learning Rust programming: https://github.com/LucianoBestia {}", "").into_bump_str(),
+                        bumpalo::format!(in bump, "Learning Rust programming: https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),
                     )])
                     .finish(),
             ])
