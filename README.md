@@ -3,6 +3,9 @@
 Learning to use Dodrio virtual DOM on a simple memory game for kids.  
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.
+You can play it here:
+[https://lucianobestia.github.io/mem1_website/index.html](https://lucianobestia.github.io/mem1_website/index.html)
+ 
 
 ## Source
 
@@ -34,9 +37,8 @@ cargo install basic-http-server
 ```
 Open the default URI in your browser
 
-```
-http://localhost:4000/
-```
+[http://localhost:4000/](http://localhost:4000/)
+
 # Memory game rules
 
 The game starts with a grid of 8 randomly shuffled card pairs face down - 16 cards in all.  
