@@ -41,7 +41,7 @@ http://localhost:4000/
 
 The game starts with a grid of 8 randomly shuffled card pairs face down - 16 cards in all.  
 The first player flips over two cards with two clicks.  
-If the cards do not match, the next player starts his turn with a click to turn both cards back face down. Then two clicks to flip over two cards.
+If the cards do not match, the next player starts his turn with a click to turn both cards back face down. Then two clicks to flip over two cards.  
 If the cards match, they are left face up and the player receives a point and continues with the next turn. No additional third click needed in that case.  
 This is a programming example for Rust Webassembly Virtual Dom application. 
 For the sake of simplicity, it is made as for single player mode. 

@@ -1,0 +1,14 @@
+{
+  "name": "mem1",
+  "collaborators": [
+    "Nick Fitzgerald <fitzgen@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "mem1_bg.wasm",
+    "mem1.js",
+    "mem1.d.ts"
+  ],
+  "browser": "mem1.js",
+  "types": "mem1.d.ts"
+}
