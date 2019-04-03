@@ -2,7 +2,7 @@
 name = "mem1"
 version = "0.1.0"
 authors = ["Luciano Furlan <Luciano.Bestia@gmail.com>"]
-edition = "2019"
+edition = "2018"
 
 [lib]
 crate-type = ["cdylib"]
