@@ -34,6 +34,7 @@ struct CardGrid {
     count_click_inside_one_turn: i32,
     card_index_of_first_click: usize,
     card_index_of_second_click: usize,
+    //counts only clicks that flip the card. The third click is not counted.
     count_all_clicks: i32,
 }
 
@@ -96,13 +97,13 @@ impl Render for CardGrid {
         'a: 'bump,
     {
         use dodrio::builder::*;
-        //the card grid is a html <table> with <tr> and <td> with <img>
-        //we first prepare the <td> with image, then push them in <tr>
-        //and finaly push them in <table>
+        //the card grid is a flex table object defined in css with <img> inside
+        //we first prepare the flex_col with image, then push them in flex_row
+        //and finaly push them in <div>
 
-        let mut vec_tr_bump = Vec::new();
+        let mut vec_flex_row_bump = Vec::new();
         for x in 1..5 {
-            let mut vec_td_bump = Vec::new();
+            let mut vec_flex_col_bump = Vec::new();
             for y in 1..5 {
                 let index = (x - 1) * 4 + y - 1;
                 let src = match self.vec_cards[index].status {
@@ -115,7 +116,8 @@ impl Render for CardGrid {
                     }
                 };
                 let id = self.vec_cards[index].id_as_card_index.as_str();
-                let td_bump = td(bump)
+                let flex_col_bump = div(bump)
+                    .attr("class", "m_flex_col")
                     .children([img(bump)
                         .attr("src", src)
                         .attr("id", id)
@@ -131,7 +133,10 @@ impl Render for CardGrid {
                                 //?? Don't understand what this does. The original was written for Input element.
                                 Some(input) => input,
                             };
-                            //we need our Struct CardGrid for Rust to write something. It comes in root.
+                            //we need our Struct CardGrid for Rust to write something.
+                            //It comes in the parameter root.
+                            //All we have to change is the CardGrid fields.
+                            //The method render will later use that for rendering the new html.
                             let card_grid = root.unwrap_mut::<CardGrid>();
                             //we have 3 possible clicks in one turn with different code branches.
                             if card_grid.count_click_inside_one_turn >= 2 {
@@ -193,36 +198,35 @@ impl Render for CardGrid {
                         })
                         .finish()])
                     .finish();
-                vec_td_bump.push(td_bump);
+                vec_flex_col_bump.push(flex_col_bump);
             }
-            let tr_bump = tr(bump).children(vec_td_bump).finish();
-            vec_tr_bump.push(tr_bump);
+            let flex_row_bump = div(bump)
+                .attr("class", "m_flex_row")
+                .children(vec_flex_col_bump)
+                .finish();
+            vec_flex_row_bump.push(flex_row_bump);
         }
 
         //create the virtual dom
         div(bump)
             //using w3.css
-            .attr("class", "w3-container w3-theme w3-card")
-            .attr("style","max-width:600px; margin-left: auto; margin-right: auto;")
+            .attr("class", "m_container")
             .children([
                 h1(bump)
-                .attr("style","text-align:center;")
                     .children([text(bumpalo::format!(in bump, "mem1{}","").into_bump_str())])
                     .finish(),
-                //the card grid is a html <table> with <tr> and <td> with <img>
-                table(bump)
-                    .attr("style", "margin-left: auto; margin-right: auto;")
-                    .children([tbody(bump).children(vec_tr_bump).finish()])
+                //the card grid is a flex table object defined in css with <img> inside
+                div(bump)
+                    .attr("style", "margin-left: auto;margin-right: auto;")
+                    .children(vec_flex_row_bump)
                     .finish(),
                 h3(bump)
-                    .attr("style","text-align:center;")
                     .children([text(
                         bumpalo::format!(in bump, "All Clicks: {}", self.count_all_clicks)
                             .into_bump_str(),
                     )])
                     .finish(),
                 h4(bump)
-                    .attr("style","text-align:center;")
                     //multiline string literal in Rust
                     .children([text(
                         bumpalo::format!(in bump, "This is a programming example for Rust Webassembly Virtual Dom application. \
@@ -231,15 +235,12 @@ impl Render for CardGrid {
                         The cards grid is only 4x4. {}", "").into_bump_str(),
                     )])
                     .finish(),
-
                 h2(bump)
-                    .attr("style","text-align:center;")
                     .children([text(
                         bumpalo::format!(in bump, "Memory game rules: {}", "").into_bump_str(),
                     )])
                     .finish(),
                 h4(bump)
-                    .attr("style","text-align:center;")
                     //multiline string literal in Rust
                     .children([text(
                         bumpalo::format!(in bump, "The game starts with a grid of 8 randomly shuffled card pairs face down - 16 cards in all. \
@@ -249,7 +250,6 @@ If the cards match, they are left face up and the player receives a point and co
                     )])
                     .finish(),
                 h6(bump)
-                    .attr("style","text-align:center;")
                     .children([text(
                         bumpalo::format!(in bump, "Learning Rust programming: https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),
                     )])

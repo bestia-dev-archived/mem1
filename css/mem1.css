@@ -1,0 +1,87 @@
+/*simplified css style based on https://www.w3schools.com/w3css/default.asp */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+}
+
+.m_container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    color: #c5aa53c2 !important;
+    background-color: #000000 !important;
+}
+
+.m_flex_row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal m_flex_cols that sits next to each other */
+.m_flex_col {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.m_flex_col img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
