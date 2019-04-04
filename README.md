@@ -6,7 +6,7 @@ The cards grid is only 4x4.
 You can play it here:  
 [https://lucianobestia.github.io/mem1_website/index.html](https://lucianobestia.github.io/mem1_website/index.html)  
 The github page files are here:  
-[https://github.com/LucianoBestia/mem1_website](https://github.com/LucianoBestia/mem1_website)
+[https://github.com/LucianoBestia/mem1_website](https://github.com/LucianoBestia/mem1_website)  
 The electron desktop application is here:  
 [https://github.com/LucianoBestia/mem1_electron](https://github.com/LucianoBestia/mem1_electron)  
 
