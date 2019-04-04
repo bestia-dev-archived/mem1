@@ -222,7 +222,7 @@ impl Render for CardGrid {
                     .finish(),
                 h3(bump)
                     .children([text(
-                        bumpalo::format!(in bump, "All Clicks: {}", self.count_all_clicks)
+                        bumpalo::format!(in bump, "Count of Clicks: {}", self.count_all_clicks)
                             .into_bump_str(),
                     )])
                     .finish(),
@@ -250,9 +250,14 @@ If the cards match, they are left face up and the player receives a point and co
                     )])
                     .finish(),
                 h6(bump)
-                    .children([text(
-                        bumpalo::format!(in bump, "Learning Rust programming: https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),
-                    )])
+                    .children([
+                        text(bumpalo::format!(in bump, "Learning Rust programming: {}", "").into_bump_str(),),
+                        a(bump)
+                            .attr("href", "https://github.com/LucianoBestia/mem1")  
+                            .attr("target","_blank")              
+                            .children([text(bumpalo::format!(in bump, "https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),)])
+                            .finish(),
+                    ])
                     .finish(),
             ])
             .finish()

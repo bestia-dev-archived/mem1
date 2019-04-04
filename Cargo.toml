@@ -1,6 +1,6 @@
 [package]
 name = "mem1"
-version = "0.1.0"
+version = "1.0.2"
 authors = ["Luciano Furlan <Luciano.Bestia@gmail.com>"]
 edition = "2018"
 
@@ -11,7 +11,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 dodrio = "0.1.0"
-wasm-bindgen = "0.2.39"
+wasm-bindgen = "0.2.40"
 console_error_panic_hook = "0.1.6"
 #for rand to work with wasm I found the clarification on this tutorial 
 #https://medium.com/@rossharrison/generating-sudoku-boards-pt-3-rust-for-webassembly-85bd7294c34a
@@ -33,4 +33,4 @@ features = [
 ]
 
 [dev-dependencies]
-wasm-bindgen-test = "0.2.39"
+wasm-bindgen-test = "0.2.40"
