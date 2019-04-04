@@ -10,6 +10,7 @@ The github page files are here:
 The electron desktop application is here:  
 [https://github.com/LucianoBestia/mem1_electron](https://github.com/LucianoBestia/mem1_electron)  
 
+![snap01](https://user-images.githubusercontent.com/31509965/55587238-181e8200-5755-11e9-88eb-f8fb62be581e.png)
 
 ## Source
 
