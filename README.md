@@ -1,3 +1,4 @@
+Everything is changing fast. This situation is on 2019-04-03.
 # mem1
 
 Learning to use Dodrio virtual DOM on a simple memory game for kids.  
@@ -54,7 +55,6 @@ This is a programming example for Rust Webassembly Virtual Dom application.
 For the sake of simplicity, it is made as for single player mode. 
 
 # Programming references
-Everything is changing fast. This situation is on 2019-04-03.  
 https://doc.rust-lang.org/book/  
 https://github.com/fitzgen/dodrio  
 https://github.com/brson/basic-http-server    
