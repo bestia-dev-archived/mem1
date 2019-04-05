@@ -5,11 +5,11 @@ Learning to use Dodrio virtual DOM on a simple memory game for kids.
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
 You can play it here:  
-[https://lucianobestia.github.io/mem1_website/index.html](https://lucianobestia.github.io/mem1_website/index.html)  
+https://lucianobestia.github.io/mem1_website/index.html  
 The github page files are here:  
-[https://github.com/LucianoBestia/mem1_website](https://github.com/LucianoBestia/mem1_website)  
+https://github.com/LucianoBestia/mem1_website  
 The electron desktop application is here:  
-[https://github.com/LucianoBestia/mem1_electron](https://github.com/LucianoBestia/mem1_electron)  
+https://github.com/LucianoBestia/mem1_electron  
 
 ![snap01](https://user-images.githubusercontent.com/31509965/55587238-181e8200-5755-11e9-88eb-f8fb62be581e.png)
 
@@ -43,7 +43,7 @@ cargo install basic-http-server
 ```
 Open the default URI in your browser
 
-[http://localhost:4000/](http://localhost:4000/)
+http://localhost:4000/  
 
 # Memory game rules
 
