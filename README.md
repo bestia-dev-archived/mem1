@@ -5,12 +5,12 @@ The images are funny cartoon characters from the alphabet.
 The cards grid is only 4x4.  
 You can play it here on the GithubPage:  
 https://lucianobestia.github.io/mem1_website/index.html  
-The github page source files are here:  
+The source files for the github page are here:  
 https://github.com/LucianoBestia/mem1_website  
 The electron desktop application (Windows, MacOS, Linux) is here:  
 https://github.com/LucianoBestia/mem1_electron  
 The PhoneGap app (Android, iOS, WindowsPhone) is here:  
-https://github.com/LucianoBestia/mem1_electron  
+https://github.com/LucianoBestia/mem1_phonegap  
 ![snap01](https://user-images.githubusercontent.com/31509965/55587238-181e8200-5755-11e9-88eb-f8fb62be581e.png)
 ## Source
 Absolutely everything manually coded is in Rust language in the file `/src/lib.rs`.  
