@@ -1,7 +1,7 @@
-Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia
+Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia  
+The next iteration of this project is here:  https://github.com/LucianoBestia/mem2  
 # mem1
 Learning to use Rust Wasm/Webassembly with Dodrio Virtual Dom on a simple memory game for kids.  
-The next iteration of this project is here:  https://github.com/LucianoBestia/mem2  
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
 You can play it here on the GithubPage:  
