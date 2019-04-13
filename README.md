@@ -1,4 +1,4 @@
-Everything is changing fast. This situation is on 2019-04-06.
+Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia
 # mem1
 Learning to use Rust Wasm/Webassembly with Dodrio Virtual Dom on a simple memory game for kids.  
 The images are funny cartoon characters from the alphabet.  
