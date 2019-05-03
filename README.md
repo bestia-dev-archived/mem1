@@ -1,15 +1,17 @@
 Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia  
 The next iteration of this project is here:  https://github.com/LucianoBestia/mem2  
+Some beginner Rust tutorials are https://github.com/LucianoBestia/rust01_the_beginning and  https://github.com/LucianoBestia/rust02_workspace_and_testing  
 # mem1
 Learning to use Rust Wasm/WebAssembly with Dodrio Virtual Dom on a simple memory game for kids.  
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
 You can play it here on the GitHubPage:  
 https://lucianobestia.github.io/mem1_website/index.html  
-The source files for the GitHub page are here:  
+The source files for the GitHub page are here (it needs only a simple static file server):  
 https://github.com/LucianoBestia/mem1_website  
 ## Prepare the development environment  
-On Windows install wasm-pack workflow tool from here:  
+In my previous projects are the instructions how to install a basic Rust environment.  
+For Wasm we need to install wasm-pack workflow tool from here:  
 https://rustwasm.github.io/wasm-pack/  
   
 ## Source
