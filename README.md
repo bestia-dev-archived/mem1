@@ -43,10 +43,8 @@ So it can continuously run while you incrementally build your changes in the fir
 ```
 basic-http-server
 ```
-Open the default URI in your browser
-```
+Open the default URI in your browser  
 http://localhost:4000/  
-```
 ## Cross-platform  
 The web application can easily be converted into a cross-platform quasi native application with Electron for Desktops and PhoneGap for Mobile.  
 The electron desktop application (Windows, MacOS, Linux) is here:  
