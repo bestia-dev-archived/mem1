@@ -5,11 +5,11 @@ The images are funny cartoon characters from the alphabet.
 The cards grid is only 4x4.  
 You can play it here on the GitHubPage:  
 https://lucianobestia.github.io/mem1_website/index.html  
-## Prepare the development environment  
+## Prepare the development environment (Windows)  
 In my previous projects are the instructions how to install a basic Rust environment:  
 https://github.com/LucianoBestia/rust01_the_beginning  
 https://github.com/LucianoBestia/rust02_workspace_and_testing  
-For wasm workflow tool installation:  
+For wasm workflow tool installation on Windows:  
 https://rustwasm.github.io/wasm-pack/installer/  
 You will need also a simple static file server:  
 ```
