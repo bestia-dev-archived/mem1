@@ -230,7 +230,6 @@ impl Render for CardGrid {
                     //multiline string literal in Rust
                     .children([text(
                         bumpalo::format!(in bump, "This is a programming example for Rust Webassembly Virtual Dom application. \
-                        For the sake of simplicity, it is made as for single player mode. \
                         The simple memory game is for kids. The images are funny cartoon characters from the alphabet. \
                         The cards grid is only 4x4. {}", "").into_bump_str(),
                     )])
@@ -243,10 +242,12 @@ impl Render for CardGrid {
                 h4(bump)
                     //multiline string literal in Rust
                     .children([text(
-                        bumpalo::format!(in bump, "The game starts with a grid of 8 randomly shuffled card pairs face down - 16 cards in all. \
-The first player flips over two cards with two clicks. \
-If the cards do not match, the next player will start his turn with a click to turn both cards back face down, then two clicks to flip over two card. \
-If the cards match, they are left face up and the player receives a point and continues with the next turn. No additional third click needed in that case. {}", "").into_bump_str(),
+                        bumpalo::format!(in bump, "For the sake of simplicity, the first iteration is made as single player mode. \
+The game starts with a grid of 8 randomly shuffled card pairs face down - 16 cards in all. \
+The player flips over two cards with two clicks. \
+If the cards do not match, the player starts a new turn with a click to turn both cards back face down. Then two clicks to flip over two cards. \
+If the cards match, they are left face up and the player continues with the next turn. No additional third click needed in that case. \
+The Count of clicks can be used as score. The lower the Count, the better score it is.{}", "").into_bump_str(),
                     )])
                     .finish(),
                 h6(bump)
