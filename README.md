@@ -1,4 +1,4 @@
-Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia 
+Everything is changing fast. This situation is on 2019-04-06. Luciano Bestia  
 Read the `Last projects` first:  
 https://github.com/LucianoBestia/rust01_the_beginning  
 https://github.com/LucianoBestia/rust02_workspace_and_testing  
