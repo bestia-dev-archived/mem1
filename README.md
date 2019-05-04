@@ -10,9 +10,7 @@ In my previous projects are the instructions how to install a basic Rust environ
 https://github.com/LucianoBestia/rust01_the_beginning  
 https://github.com/LucianoBestia/rust02_workspace_and_testing  
 For wasm workflow tool installation:  
-```
 https://rustwasm.github.io/wasm-pack/installer/  
-```
 You will need also a simple static file server:  
 ```
 cargo install basic-http-server
