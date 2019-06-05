@@ -6,8 +6,8 @@ https://github.com/LucianoBestia/rust02_workspace_and_testing
 Learning to use Rust Wasm/WebAssembly with Dodrio Virtual Dom on a simple memory game for kids.  
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
-You can play it here on the GitHubPage:  
-https://lucianobestia.github.io/mem1_website/index.html  
+You can play it here ( hosted on google cloud platform ):  
+http://34.87.17.103/mem1/  
 ## Prepare the development environment (Windows)  
 In my previous projects are the instructions how to install a basic Rust environment.  
 For wasm workflow tool installation on Windows:  
