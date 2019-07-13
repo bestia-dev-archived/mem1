@@ -5,10 +5,9 @@ use dodrio::bumpalo::{self, Bump};
 use dodrio::{Node, Render};
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
-//cannot use rand::thread_rng; with wasm. instead use OsRng
-//clarification: https://medium.com/@rossharrison/generating-sudoku-boards-pt-3-rust-for-webassembly-85bd7294c34a
-use rand::rngs::OsRng;
-use rand::Rng;
+
+use rand::seq::SliceRandom;
+use rand::{thread_rng, Rng};
 
 enum CardStatus {
     CardFaceDown,
@@ -59,12 +58,10 @@ impl CardGrid {
                 i += 1;
             }
         }
+
         //shuffle the numbers
-        let mut vrndslice = vec_of_random_numbers.as_mut_slice();
-        //cannot use rand_rng and new Slice Shuffle with wasm.
-        //instead use OsRng with deprecated rand::Rng::shuffle
-        //gslice.shuffle(&mut thread_rng());
-        OsRng::new().unwrap().shuffle(&mut vrndslice);
+        let vrndslice = vec_of_random_numbers.as_mut_slice();
+        vrndslice.shuffle(&mut thread_rng());
 
         //create Cards from random numbers
         dbg!("vec_of_random_numbers values");
@@ -254,8 +251,8 @@ The Count of clicks can be used as score. The lower the Count, the better score 
                     .children([
                         text(bumpalo::format!(in bump, "Learning Rust programming: {}", "").into_bump_str(),),
                         a(bump)
-                            .attr("href", "https://github.com/LucianoBestia/mem1")  
-                            .attr("target","_blank")              
+                            .attr("href", "https://github.com/LucianoBestia/mem1")
+                            .attr("target","_blank")
                             .children([text(bumpalo::format!(in bump, "https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),)])
                             .finish(),
                     ])
