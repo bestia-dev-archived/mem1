@@ -31,11 +31,11 @@ struct CardGrid {
     //The player in one turn clicks 2 times and open 2 cards. If not match,
     //the third click closes opened cards and
     //it starts the next player turn.
-    count_click_inside_one_turn: i32,
+    count_click_inside_one_turn: i16,
     card_index_of_first_click: usize,
     card_index_of_second_click: usize,
     //counts only clicks that flip the card. The third click is not counted.
-    count_all_clicks: i32,
+    count_all_clicks: i16,
 }
 
 impl CardGrid {
@@ -48,7 +48,7 @@ impl CardGrid {
 
         while i < 8 {
             //gen_range is lower inclusive, upper exclusive
-            let num: i32 = rng.gen_range(1, 26 + 1);
+            let num: i16 = rng.gen_range(1, 26 + 1);
             if dbg!(vec_of_random_numbers.contains(&num)) {
                 //do nothing if the random number is repeated
                 dbg!(num);
