@@ -13,9 +13,9 @@ crate-type = ["cdylib"]
 dodrio = "0.1.0"
 wasm-bindgen = "0.2.40"
 console_error_panic_hook = "0.1.6"
-#for rand to work with wasm I found the clarification on this tutorial 
+#for rand to work with wasm I found the clarification on this tutorial
 #https://medium.com/@rossharrison/generating-sudoku-boards-pt-3-rust-for-webassembly-85bd7294c34a
-rand = { version = "0.6", features = ["wasm-bindgen"] }
+rand = { version = "0.7", features = ["wasm-bindgen"] }
 
 [dependencies.web-sys]
 version = "0.3.16"
