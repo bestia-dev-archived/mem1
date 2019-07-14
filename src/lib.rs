@@ -68,7 +68,7 @@ impl CardGrid {
         dbg!("vec_of_random_numbers values");
         let mut vec_card_from_random_numbers = Vec::new();
         for (index, random_number) in vec_of_random_numbers.iter().enumerate() {
-            let src = String::from(format!("content/mem_image_{:02}.png", random_number));
+            let src = format!("content/mem_image_{:02}.png", random_number);
             dbg!(&src);
             let new_card = Card {
                 status: CardFaceStatus::Down,
