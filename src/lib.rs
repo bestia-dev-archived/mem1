@@ -3,20 +3,21 @@
 
 use dodrio::bumpalo::{self, Bump};
 use dodrio::{Node, Render};
+
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
 
 use rand::seq::SliceRandom;
 use rand::{thread_rng, Rng};
 
-enum CardStatus {
-    CardFaceDown,
-    CardFaceUpTemporary,
-    CardFaceUpPermanently,
+enum CardFaceStatus {
+    Down,
+    UpTemporary,
+    UpPermanently,
 }
 
 struct Card {
-    status: CardStatus,
+    status: CardFaceStatus,
     //src attribute for HTML element image
     src_as_image_source: String,
     //id attribute for HTML element image contains the card index
@@ -70,7 +71,7 @@ impl CardGrid {
             let src = String::from(format!("content/mem_image_{:02}.png", random_number));
             dbg!(&src);
             let new_card = Card {
-                status: CardStatus::CardFaceDown,
+                status: CardFaceStatus::Down,
                 src_as_image_source: src,
                 id_as_card_index: format!("img{}", index),
             };
@@ -104,11 +105,11 @@ impl Render for CardGrid {
             for y in 1..5 {
                 let index = (x - 1) * 4 + y - 1;
                 let src = match self.vec_cards[index].status {
-                    CardStatus::CardFaceDown => SRC_FOR_CARD_FACE_DOWN,
-                    CardStatus::CardFaceUpTemporary => {
+                    CardFaceStatus::Down => SRC_FOR_CARD_FACE_DOWN,
+                    CardFaceStatus::UpTemporary => {
                         self.vec_cards[index].src_as_image_source.as_str()
                     }
-                    CardStatus::CardFaceUpPermanently => {
+                    CardFaceStatus::UpPermanently => {
                         self.vec_cards[index].src_as_image_source.as_str()
                     }
                 };
@@ -139,9 +140,9 @@ impl Render for CardGrid {
                             if card_grid.count_click_inside_one_turn >= 2 {
                                 //third click closes first and second card
                                 card_grid.vec_cards[card_grid.card_index_of_first_click].status =
-                                    CardStatus::CardFaceDown;
+                                    CardFaceStatus::Down;
                                 card_grid.vec_cards[card_grid.card_index_of_second_click].status =
-                                    CardStatus::CardFaceDown;
+                                    CardFaceStatus::Down;
                                 card_grid.count_click_inside_one_turn = 0;
                             } else {
                                 //id attribute of image html element is prefixed with img ex. "img12"
@@ -150,9 +151,9 @@ impl Render for CardGrid {
 
                                 match card_grid.vec_cards[this_click_card_index].status {
                                     //if card facedown, flip it
-                                    CardStatus::CardFaceDown => {
+                                    CardFaceStatus::Down => {
                                         card_grid.vec_cards[this_click_card_index].status =
-                                            CardStatus::CardFaceUpTemporary;
+                                            CardFaceStatus::UpTemporary;
                                         if card_grid.count_click_inside_one_turn == 0 {
                                             //if is first click, just count the clicks
                                             card_grid.card_index_of_first_click =
@@ -176,17 +177,17 @@ impl Render for CardGrid {
                                                 // the two cards matches. make them permanent FaceUp
                                                 card_grid.vec_cards
                                                     [card_grid.card_index_of_first_click]
-                                                    .status = CardStatus::CardFaceUpPermanently;
+                                                    .status = CardFaceStatus::UpPermanently;
                                                 card_grid.vec_cards
                                                     [card_grid.card_index_of_second_click]
-                                                    .status = CardStatus::CardFaceUpPermanently;
+                                                    .status = CardFaceStatus::UpPermanently;
                                                 card_grid.count_click_inside_one_turn = 0;
                                             }
                                         }
                                     }
                                     //do nothing if player clicks the faceUp cards
-                                    CardStatus::CardFaceUpTemporary => (),
-                                    CardStatus::CardFaceUpPermanently => (),
+                                    CardFaceStatus::UpTemporary => (),
+                                    CardFaceStatus::UpPermanently => (),
                                 };
                             }
 
