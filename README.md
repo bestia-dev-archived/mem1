@@ -7,7 +7,7 @@ Learning to use Rust Wasm/WebAssembly with Dodrio Virtual Dom on a simple memory
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
 You can play it here ( hosted on google cloud platform ):  
-http://34.87.17.103/mem1/  
+https://bestia.dev/mem1/  
 ## Prepare the development environment (Windows)  
 In my previous projects are the instructions how to install a basic Rust environment.  
 For wasm workflow tool installation on Windows:  
@@ -64,6 +64,15 @@ The Count of clicks can be used as score. The lower the Count, the better score 
 # Next projects
 The next iteration of this project is here:  
 https://github.com/LucianoBestia/mem2  
+
+## cargo crev reviews and advisory
+
+It is recommended to always use [cargo-crev](https://github.com/crev-dev/cargo-crev)  
+to verify the trustworthiness of each of your dependencies.  
+Please, spread this info.  
+On the web use this url to read crate reviews. Example:  
+<https://bestia.dev/cargo_crev_web/query/num-traits>  
+
 # Programming references
 https://doc.rust-lang.org/book/  
 https://github.com/fitzgen/dodrio  
