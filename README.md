@@ -1,7 +1,7 @@
 # mem1
 
 **Learning to use Rust Wasm/WebAssembly with Dodrio Virtual Dom on a simple memory game for kids.**  
-***version: 1.0  date: 2019-04-06 author: [Dev_Bestia](https://bestia.dev) repository: [GitHub](https://github.com/LucianoBestia/mem1)***  
+***version: 1.0  date: 2019-04-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/bestia-dev/mem1)***  
 
 The images are funny cartoon characters from the alphabet.  
 The cards grid is only 4x4.  
@@ -9,8 +9,8 @@ You can play it here ( hosted on google cloud platform ):
 <https://bestia.dev/mem1/>  
 
 Read the `Last projects` first:  
-<https://github.com/LucianoBestia/rust01_the_beginning>  
-<https://github.com/LucianoBestia/rust02_workspace_and_testing>  
+<https://github.com/bestia-dev/rust01_the_beginning>  
+<https://github.com/bestia-dev/rust02_workspace_and_testing>  
 
 ## Prepare the development environment (Windows)  
 
@@ -33,12 +33,12 @@ I prepared a small simple mem1.css with flex objects for styling.
 No need for npm or web-pack.  
 The compiled files for the GitHub page are here  
 (the game needs only a simple static file server):  
-<https://github.com/LucianoBestia/mem1_website>  
+<https://github.com/bestia-dev/mem1_website>  
 You already know how to clone a GitHub repository:  
 (in the rustprojects/ folder execute)  
 
 ```bash
-clone git@github.com:LucianoBestia/mem1.git
+clone git@github.com:bestia-dev/mem1.git
 ```
 
 ## Build
@@ -67,9 +67,9 @@ Open the default URI in your browser
 
 The web application can easily be converted into a cross-platform quasi native application with Electron for Desktops and PhoneGap for Mobile.  
 The electron desktop application (Windows, MacOS, Linux) is here:  
-<https://github.com/LucianoBestia/mem1_electron>  
+<https://github.com/bestia-dev/mem1_electron>  
 The PhoneGap app (Android, iOS, WindowsPhone) is here:  
-<https://github.com/LucianoBestia/mem1_phonegap>  
+<https://github.com/bestia-dev/mem1_phonegap>  
 
 ## Memory game rules
 
@@ -84,7 +84,7 @@ The Count of clicks can be used as score. The lower the Count, the better score 
 ## Next projects
 
 The next iteration of this project is here:  
-<https://github.com/LucianoBestia/mem2>  
+<https://github.com/bestia-dev/mem2>  
 
 ## cargo crev reviews and advisory
 

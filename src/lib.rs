@@ -254,9 +254,9 @@ The Count of clicks can be used as score. The lower the Count, the better score 
                     .children([
                         text(bumpalo::format!(in bump, "Learning Rust programming: {}", "").into_bump_str(),),
                         a(bump)
-                            .attr("href", "https://github.com/LucianoBestia/mem1")  
+                            .attr("href", "https://github.com/bestia-dev/mem1")  
                             .attr("target","_blank")              
-                            .children([text(bumpalo::format!(in bump, "https://github.com/LucianoBestia/mem1{}", "").into_bump_str(),)])
+                            .children([text(bumpalo::format!(in bump, "https://github.com/bestia-dev/mem1{}", "").into_bump_str(),)])
                             .finish(),
                     ])
                     .finish(),
