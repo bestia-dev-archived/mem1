@@ -1,6 +1,5 @@
 /target
 **/*.rs.bk
 wasm-pack.log
-/.vscode
 /pkg
 
