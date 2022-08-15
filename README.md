@@ -3,7 +3,7 @@
 **Learning to use Rust Wasm/WebAssembly with Dodrio Virtual Dom on a simple memory game for kids.**  
 ***version: 1.0  date: 2019-04-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/bestia-dev/mem1)***  
 
-![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/992251981)
+![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/992251981.svg)
 
 Hashtags: #rustlang #game #tutorial  
 My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
